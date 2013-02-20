@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Functions in function</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var function1 = function (data) {
+            var innerFunction = function (data) {
+                var iiFunc = function (data) {
+                    return data + 5;
+                };
+                return iiFunc(data + 1);
+            };
+            return innerFunction(data * 2);
+        }
+
+        var result = function1(100);
+        window.alert(result);
+
+    </script>
+</body>
+</html>
